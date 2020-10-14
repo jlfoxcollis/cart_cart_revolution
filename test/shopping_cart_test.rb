@@ -65,11 +65,10 @@ class ShoppingCartTest < MiniTest::Test
     cart.add_product(product4)
     assert_equal cart.sorted , cart.sorted_products_by_quantity
 
-    breakdown = [{:paper=>"#<Product:0x00007ff19f0c2630>"},
-                 {:meat=>"#<Product:0x00007ff19f0c2540>"},
-                 {:paper=>"#<Product:0x00007ff19f0c24c8>"},
-                 {:produce=>"#<Product:0x00007ff19f0c2428>"}]
-                 # binding.pry
+    breakdown = [{:paper=>["#<Product:0x00007ff19f0c2630>"]},
+                 {:meat=>["#<Product:0x00007ff19f0c2540>"]},
+                 {:paper=>["#<Product:0x00007ff19f0c24c8>"]},
+                 {:produce=>["#<Product:0x00007ff19f0c2428>"]}]
     assert_equal breakdown, cart.product_breakdown
   end
 
