@@ -9,9 +9,19 @@ class Product
     @name = name
     @unit_price = unit_price
     @quantity = quantity.to_i
+    @hoard = false
   end
 
   def total_price
     @unit_price * @quantity
   end
+
+  def hoard
+    @hoard = true
+  end
+
+  def hoarded?
+    @hoard
+  end
+
 end
